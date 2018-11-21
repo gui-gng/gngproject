@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+
+ 
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="content" >
+    <% include ../partials/nav.ejs %>
+    <% include ../partials/home.ejs %>
+    <% include ../partials/about.ejs %>
+    <% include ../partials/cast.ejs %>
+    <% include ../partials/ericsson.ejs %>
+    <% include ../partials/nordica.ejs %>
+    
+  </div>
+
+  <div id="loading"></div>
+    <div id="isItLoaded"></div>
+  </div>
+
+
+
+ <script>
+
+
+$(document).ready(function() {
+  //set smooth navigation
+  $("#navbarGNG a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate(
+        {scrollTop: $(hash).offset().top},
+        500,
+        function(){window.location.hash = hash;}
+      );
+    } 
+
+  });
+
+
+
+//Loading area
+/*
+  setTimeout(function(){
+        let loading = document.getElementById('loading').value;
+        console.log(loading);
+        let content = document.getElementById('isItLoaded');
+        if (isItLoaded == undefined) {
+          let newDiv = `
+          <div class="letter">l</div>
+          `;
+loading.innerHTML = newDiv;
+          loading.className = 'displayIt';
+        }
+        else if (isItLoaded !== undefined) {
+          loading.innerHTML = "";
+          loading.className = 'noDisplay';
+        }
+      },10);
+
+  setTimeout(function(){
+        let loading = document.getElementById('loading').value;
+        console.log(loading);
+        let content = document.getElementById('isItLoaded');
+        if (isItLoaded == undefined) {
+          let newDiv = `
+          <div class="letter">o</div>
+          `;
+loading.innerHTML = newDiv;
+          loading.className = 'displayIt';
+        }
+        else if (isItLoaded !== undefined) {
+          loading.innerHTML = "";
+          loading.className = 'noDisplay';
+        }
+      },300);
+      */
+});
+
+
+
+var waypoints = $('#aboutme').waypoint(function(direction) {
+  //$(".showswing li").addClass( "show" );
+  $(".showswing li").each(function (i, element) {
+    //alert(i + " - " + element);
+    setTimeout(function () {
+            $(element).addClass('show');
+        }, i * 250);
+    })
+
+
+}, {
+  offset: '25%'
+})
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
