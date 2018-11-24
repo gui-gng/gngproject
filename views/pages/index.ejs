@@ -2,8 +2,6 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
-
- 
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -14,7 +12,6 @@
     <% include ../partials/cast.ejs %>
     <% include ../partials/ericsson.ejs %>
     <% include ../partials/nordica.ejs %>
-    
   </div>
 
   <div id="loading"></div>
@@ -85,7 +82,7 @@ loading.innerHTML = newDiv;
 
 var waypoints = $('#aboutme').waypoint(function(direction) {
   //$(".showswing li").addClass( "show" );
-  $(".showswing li").each(function (i, element) {
+  $("#aboutme .showswing li").each(function (i, element) {
     //alert(i + " - " + element);
     setTimeout(function () {
             $(element).addClass('show');
@@ -95,6 +92,23 @@ var waypoints = $('#aboutme').waypoint(function(direction) {
 
 }, {
   offset: '25%'
+});
+
+
+$('#cast').waypoint(function(direction) {
+  $("#cast .showswing li").each(function (i, element) {
+    setTimeout(function () {
+            $(element).addClass('show');
+        }, i * 250);
+    })
+
+
+});
+
+
+$('#ericsson').waypoint(function(direction) {
+  $("#ericsson .col-6").removeClass("d-none");
+  $("#ericsson .col-6").addClass("animated");
 });
 
 </script>

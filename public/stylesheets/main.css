@@ -160,7 +160,7 @@
 
 .showswing li{
 
-  background: RGBA(50,50,50,0.1);
+  background: RGBA(50,50,50,0.8);
   color: white;
 }
 
@@ -169,4 +169,24 @@
 }
 
 
+.bg-blackTranparent{
+  background: RGBA(50,50,50,0.4) !important;
+}
+
+.bg-blackTranparentLink:hover {
+  background: RGBA(50,50,50,0.4) !important;
+}
+
+
+#cast{
+  background: url("/images/castOffice.jpg") center center;
+}
+
+#ericsson{
+  background: url("/images/ericssonOffice.jpg") center center;
+}
+
+#nordica{
+  background: url("/images/nordicaOffice.jpg") center bottom;
+}
 
