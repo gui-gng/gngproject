@@ -5,6 +5,11 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="loading" class="bg-light">
+    <h1 class="display-4 pulse animated infinite">Loading</h1>
+   
+  </div>
+  <div id="positionScreen"></div>
   <div id="content" >
     <% include ../partials/nav.ejs %>
     <% include ../partials/home.ejs %>
@@ -14,15 +19,10 @@
     <% include ../partials/nordica.ejs %>
   </div>
 
-  <div id="loading"></div>
-    <div id="isItLoaded"></div>
-  </div>
-
-
-
+  
  <script>
 
-
+//function for smooth navigation
 $(document).ready(function() {
   //set smooth navigation
   $("#navbarGNG a").on('click', function(event) {
@@ -37,6 +37,28 @@ $(document).ready(function() {
     } 
 
   });
+
+
+
+
+var isReady = false;
+setInterval(function(){
+    var loading = $("#loading");
+        if (isReady) {
+          loading.addClass("d-none");
+          loading.html("Ready");
+        }
+        else{
+          loading.html("Loading");
+        }
+},1000);
+
+
+
+
+$(window).on("load", function (e) {
+    isReady = true;
+});
 
 
 
@@ -87,8 +109,7 @@ var waypoints = $('#aboutme').waypoint(function(direction) {
     setTimeout(function () {
             $(element).addClass('show');
         }, i * 250);
-    })
-
+    });
 
 }, {
   offset: '25%'
@@ -101,12 +122,15 @@ $('#cast').waypoint(function(direction) {
             $(element).addClass('show');
         }, i * 250);
     })
-
-
 });
 
 
 $('#ericsson').waypoint(function(direction) {
+
+$("#positionScreen").html($(this.element).offset().top);
+  
+
+  
   $("#ericsson .col-6").removeClass("d-none");
   $("#ericsson .col-6").addClass("animated");
 });
