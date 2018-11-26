@@ -173,6 +173,10 @@
   background: RGBA(50,50,50,0.4) !important;
 }
 
+.bg-blackTranparent2{
+  background: RGBA(50,50,50,0.8) !important;
+}
+
 .bg-blackTranparentLink:hover {
   background: RGBA(50,50,50,0.4) !important;
 }
