@@ -5,7 +5,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div id="loading" class="bg-light">
+  <div id="loading" class="bg-light opacityFull">
     <h1 class="display-4 pulse animated infinite">Loading</h1>
    
   </div>
@@ -40,23 +40,22 @@ $(document).ready(function() {
 
 
 
-
 var isReady = false;
-setInterval(function(){
-    var loading = $("#loading");
+var loading = $("#loading");
+var intervalLoading = setInterval(function(){
         if (isReady) {
+          loading.removeClass("opacityFull");
           loading.addClass("d-none");
           loading.html("Ready");
+          clearInterval(intervalLoading);
         }
-        else{
-          loading.html("Loading");
-        }
-},300);
+},1000);
 
 
 
 
 $(window).on("load", function (e) {
+  //alert("ready");
     isReady = true;
 });
 
@@ -127,10 +126,9 @@ $('#cast').waypoint(function(direction) {
 
 $('#ericsson').waypoint(function(direction) {
 
-$("#positionScreen").html($(this.element).offset().top);
-  
-
-  
+  //$("#positionScreen").html($(this.element).offset().top);
+  $("#ericsson .col-12").removeClass("d-none");
+  $("#ericsson .col-12").addClass("animated");
   $("#ericsson .col-6").removeClass("d-none");
   $("#ericsson .col-6").addClass("animated");
 });

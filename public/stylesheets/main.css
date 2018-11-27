@@ -44,7 +44,7 @@
 #loading {
   position: fixed;
   z-index: 10000;
-
+  opacity: 0;
   top:0px;
   left: 0px;
   height: 100%;
@@ -54,8 +54,13 @@
   justify-content: center;
   align-items: center;
   background: RGB(100,100,100);
-  transition: display 0s, opacity 0.5s linear;
+  transition: display 1s, opacity 0.5s linear;
 }
+
+.opacityFull{
+  opacity: 1 !important;
+}
+
 
 #positionScreen{
   position: fixed;
