@@ -38,6 +38,8 @@ $(document).ready(function() {
 
   });
 
+});
+
 
 
 var isReady = false;
@@ -45,8 +47,8 @@ var loading = $("#loading");
 var intervalLoading = setInterval(function(){
         if (isReady) {
           loading.removeClass("opacityFull");
-          loading.addClass("d-none");
-          loading.html("Ready");
+          //loading.addClass("d-none");
+          loading.html("<h1 class='display-1 zoomIn animated text-warning'>Ready</h1>");
           clearInterval(intervalLoading);
         }
 },1000);
@@ -60,44 +62,6 @@ $(window).on("load", function (e) {
 });
 
 
-
-//Loading area
-/*
-  setTimeout(function(){
-        let loading = document.getElementById('loading').value;
-        console.log(loading);
-        let content = document.getElementById('isItLoaded');
-        if (isItLoaded == undefined) {
-          let newDiv = `
-          <div class="letter">l</div>
-          `;
-loading.innerHTML = newDiv;
-          loading.className = 'displayIt';
-        }
-        else if (isItLoaded !== undefined) {
-          loading.innerHTML = "";
-          loading.className = 'noDisplay';
-        }
-      },10);
-
-  setTimeout(function(){
-        let loading = document.getElementById('loading').value;
-        console.log(loading);
-        let content = document.getElementById('isItLoaded');
-        if (isItLoaded == undefined) {
-          let newDiv = `
-          <div class="letter">o</div>
-          `;
-loading.innerHTML = newDiv;
-          loading.className = 'displayIt';
-        }
-        else if (isItLoaded !== undefined) {
-          loading.innerHTML = "";
-          loading.className = 'noDisplay';
-        }
-      },300);
-      */
-});
 
 
 
@@ -134,8 +98,6 @@ $('#ericsson').waypoint(function(direction) {
 });
 
 </script>
-
-
 
 
 

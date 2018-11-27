@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   background: RGB(100,100,100);
-  transition: display 1s, opacity 0.5s linear;
+  transition: display 1s, opacity 1s linear;
 }
 
 .opacityFull{
@@ -208,4 +208,5 @@ background: RGB(100,100,100);
 #nordica{
   background: url("/images/nordicaOffice.jpg") center bottom;
 }
+
 
