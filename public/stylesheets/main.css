@@ -1,3 +1,10 @@
+body{
+  overflow: hidden !important;
+}
+
+
+
+
 @font-face {
     font-family: handsome;
     src: url(/fonts/Handsome.ttf);
@@ -53,8 +60,13 @@
   transition:  opacity 1s linear,display 1s;
 }
 
+.zindexHigh{
+  z-index: 10001;
+}
+
 .opacityFull{
   opacity: 1 !important;
+
 }
 
 
