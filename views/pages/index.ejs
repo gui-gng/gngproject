@@ -47,11 +47,15 @@ var loading = $("#loading");
 var intervalLoading = setInterval(function(){
         if (isReady) {
           loading.removeClass("opacityFull");
-          //loading.addClass("d-none");
+          
           loading.html("<h1 class='display-1 zoomIn animated text-warning'>Ready</h1>");
           clearInterval(intervalLoading);
+          //set timeout with the same time as the transition
+          setTimeout(function(){
+            loading.addClass("d-none");
+          }, 1000);
         }
-},1000);
+},5000);
 
 
 
