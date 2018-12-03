@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: handsome;
     src: url(/fonts/Handsome.ttf);
@@ -7,9 +8,6 @@
     font-family: handsome;
     color: white;
 }
-
-
-
 
 @keyframes moveBall {
   from {
@@ -22,7 +20,6 @@
   
   }
 }
-
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -57,8 +54,13 @@
   transition:  opacity 1s linear,display 1s;
 }
 
+.zindexHigh{
+  z-index: 10001;
+}
+
 .opacityFull{
   opacity: 1 !important;
+
 }
 
 
@@ -195,7 +197,6 @@ background: RGB(100,100,100);
 .bg-blackTranparentLink:hover {
   background: RGBA(50,50,50,0.4) !important;
 }
-
 
 #cast{
   background: url("/images/castOffice.jpg") center center;
