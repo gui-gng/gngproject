@@ -45,13 +45,13 @@
 				        <a class="nav-link text-dark " data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" href="#toolsCSharp"> C#.NET</a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link text-dark " data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" href="#toolsJava">Java/ C#</a>
-				      </li>
+				        <a class="nav-link text-dark " data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" href="#toolsJava">Java/C#</a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link text-dark " data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" href="#toolsExamples"><i class="fas fa-images"></i></a>
+							</li>
 				    </ul>
-				  </div>
-
-
-
+					</div>
 
 				  <div class="card-body bg-white text-dark rounded-bottom">
 				  	<div id="toolsExcel" class="tab-pane collapse fadeIn animated show active" role="tabpanel" >
@@ -78,10 +78,80 @@
 					-Data extractor (Login in the system, Download xmls and upload to database)<br/>
 					-Read the data from the xml/excel and store into SQL Server;
 					</div>
-				  </div>
+					<div id="toolsExamples" class="tab-pane collapse fadeIn animated" role="tabpanel" >
+						<div class="row">
+							<div class="col">
+								<div class="showImg">
+									<img class="img-fluid" src="../images/ericsson/summary.png"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="showImg">
+									<img class="img-fluid" src="../images/ericsson/NetSales.png"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="showImg">
+									<img class="img-fluid" src="../images/ericsson/CPM Allocation.png"/>
+								</div>
+							</div>
+						</div>
+						
 				</div>
 			</div>
 			
 		</div>
+		
 	</div>
 </div>
+
+<div id="modalImgsEricsson" class="modal fade modalBG" tabindex="-1" role="dialog">
+		<span class="close m-3"><i class="far fa-times-circle"></i></span>
+		<div class="modal-dialog modal-lg bg-transparent" role="document">
+			<div class="modal-content bg-transparent">
+		
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="img01">
+			
+				<!-- Modal Caption (Image Text) -->
+				<div id="caption"></div>
+			</div>
+		</div>
+	</div>
+
+<script>
+
+
+		$('.showImg').click(function() {
+				var srcName = $(this).find($("img")).attr("src");
+				$("#modalImgsEricsson").find($("img")).attr("src",srcName);
+				//OPTION 1
+				$('#modalImgsEricsson').modal('show');
+
+				//OPTION 2
+				//$("#modalImgsEricsson").addClass("show");
+				//$("#modalImgsEricsson").css("display","block");
+
+				$("#modalImgsEricsson").addClass("animated");
+				$("#modalImgsEricsson").addClass("fadeInDown");
+				
+				
+		});
+		$('.close').click(function() {
+			
+			$("#modalImgsEricsson").removeClass("animated");
+			$("#modalImgsEricsson").removeClass("fadeInDown");	
+
+			// $("#modalImgsEricsson").addClass("animated");
+			// $("#modalImgsEricsson").addClass("fadeOut");	
+
+			//OPTION 1
+			$('#modalImgsEricsson').modal('hide');
+
+			//OPTION 2
+			//$("#modalImgsEricsson").removeClass("show");
+			//$("#modalImgsEricsson").css("display","none");
+		});
+</script>
