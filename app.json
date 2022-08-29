@@ -1,8 +1,0 @@
-{
-  "name": "Guilherme Nazareth Goncalves",
-  "description": "A little bit about me",
-  "repository": "https://github.com/heroku/gngproject",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
-  "keywords": ["node", "express", "heroku"],
-  "image": "heroku/nodejs"
-}
