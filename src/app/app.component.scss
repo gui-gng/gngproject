@@ -1,0 +1,26 @@
+.stickyBar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+  flex-direction: column;
+}
+.avatar {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.card-job {
+  max-width: 400px;
+}
+
+.divworldmapsvg {
+  width: 100%;
+}
+
+.worldmapsvg {
+  width: 100%;
+}
+
+.worldmapsvg #BR {
+  fill: green;
+}
