@@ -4,7 +4,7 @@
 </mat-toolbar>
 
 <div class="container text-center bg-dark text-light">
-  <div class="row align-items-center">
+  <div class="row align-items-center pb-5 mb-5  border-bottom">
     <div class="col-2">
       <img class="avatar p-2" src="./assets/profile-pic.jpg" />
     </div>
@@ -19,53 +19,9 @@
     </div>
   </div>
 
-  <div class="row align-items-center">
-    <mat-card class="card-job m-3">
-      <mat-card-title>Full Stack Developer</mat-card-title>
-      <mat-card-subtitle>06-2022</mat-card-subtitle>
-      <mat-card-content>
-        <p>Safra</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="card-job m-3">
-      <mat-card-title>Full Stack Developer</mat-card-title>
-      <mat-card-subtitle>02-2020 06-2021 </mat-card-subtitle>
-      <mat-card-content>
-        <p>Freelancer</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="card-job m-3">
-      <mat-card-title>System Administrator</mat-card-title>
-      <mat-card-subtitle>10-2018 02-2020</mat-card-subtitle>
-      <mat-card-content>
-        <p>Netaware</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="card-job m-3">
-      <mat-card-title>Business Intelligence Analyst</mat-card-title>
-      <mat-card-subtitle>10-2016 02-2017</mat-card-subtitle>
-      <mat-card-content>
-        <p>Nordica</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="card-job m-3">
-      <mat-card-title>Business Intelligence Analyst</mat-card-title>
-      <mat-card-subtitle>10-2012 09-2016</mat-card-subtitle>
-      <mat-card-content>
-        <p>Ericsson</p>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="card-job m-3">
-      <mat-card-title>Java Developer</mat-card-title>
-      <mat-card-subtitle>10-2012 09-2016</mat-card-subtitle>
-      <mat-card-content>
-        <p>CAST Group</p>
-      </mat-card-content>
-    </mat-card>
+  <div class="row align-items-center justify-content-center">
+    <ng-container *ngFor="let experience of listExperiences">
+      <app-timeline-item [experience]="experience"></app-timeline-item>
+    </ng-container>
   </div>
 </div>

@@ -7,8 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { TimelineItemComponent } from './components/timeline-item/timeline-item.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TimelineItemComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
