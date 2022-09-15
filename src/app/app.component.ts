@@ -12,7 +12,7 @@ export class AppComponent {
     safra: {
       name: 'Safra',
       industry: 'Banking',
-      imgPath: './assets/icon-safra.jpeg',
+      imgPath: './assets/icon-safra.jpg',
     } as ICompany,
     freelancer: {
       name: 'Freelancer',
@@ -22,17 +22,17 @@ export class AppComponent {
     netaware: {
       name: 'Netaware',
       industry: 'IT Support',
-      imgPath: './assets/icon-netaware.jpeg',
+      imgPath: './assets/icon-netaware.jpg',
     } as ICompany,
     nordica: {
       name: 'Nordica',
       industry: 'Consulting',
-      imgPath: './assets/icon-nordica.jpeg',
+      imgPath: './assets/icon-nordica.jpg',
     } as ICompany,
     ericsson: {
       name: 'Ericsson',
       industry: 'Telecomunications',
-      imgPath: './assets/icon-ericsson.jpeg',
+      imgPath: './assets/icon-ericsson.jpg',
     } as ICompany,
     cast: {
       name: 'CAST Group',
