@@ -3,10 +3,12 @@
 }
 .company-img {
   border-radius: 100%;
-  border: solid 1px;
+  background-color: RGBA(0, 0, 0, 0.5);
+  border: solid 2px RGB(0, 0, 0);
 }
+
 .company-name-date {
-  background: rgb(107, 107, 107);
+  background: rgb(77, 77, 77);
   border-radius: 2rem 0rem 0rem 2rem;
   height: 7rem;
 }
