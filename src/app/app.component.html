@@ -18,7 +18,27 @@
       </p>
     </div>
   </div>
-
+  <div class="row align-items-center justify-content-center pb-5 mb-5  border-bottom">
+    <h1>Repositories</h1>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Description</th>
+          <th scope="col">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Personal Repository</th>
+          <td><a href="https://github.com/gui-gng" target="_blank">https://github.com/gui-gng</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Personal Project Repository</th>
+          <td><a href="https://github.com/evaluatz" target="_blank">https://github.com/evaluatz</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <div class="row align-items-center justify-content-center">
     <ng-container *ngFor="let experience of listExperiences">
       <app-timeline-item [experience]="experience"></app-timeline-item>
